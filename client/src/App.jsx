@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./app.css";
+import "./App.css";
 import axios from "axios";
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
     const data = new FormData();
     Object.entries(formData).forEach(([key, value]) => data.append(key, value));
     try {
-      const res = await axios.post("http://localhost:5000/api/seller", data);
+      const res = await axios.post("https://flipkart-seller-form.onrender.com/api/seller", data);
       alert("Seller Registered Successfully!");
     } catch (err) {
       alert("Error submitting form");
